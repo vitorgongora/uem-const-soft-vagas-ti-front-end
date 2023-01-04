@@ -1,0 +1,65 @@
+@import "variables.scss";
+
+.layout-header {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  z-index: 1000;
+}
+
+.ant-breadcrumb {
+  margin-left: 16px;
+}
+
+@media screen and (max-width: 900px) {
+  .breadcrumb-header {
+    display: none;
+  }
+}
+
+.right-content {
+  margin-left: auto;
+}
+
+.sidebar-collapse-icon {
+  &:hover {
+    svg {
+      fill: $black !important;
+      transition: fill 0.2s;
+    }
+  }
+}
+
+.header-button {
+  border: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: $white;
+  cursor: pointer;
+  &:hover {
+    background-color: $lightest-grey;
+  }
+  .ant-skeleton-input {
+    display: block;
+    //margin-top: 20px;
+  }
+  .ant-skeleton-element {
+    height: 17px;
+  }
+}
+
+.wiki-button {
+  display: inline-block;
+  padding-left: 16px;
+  padding-right: 16px;
+  svg {
+    fill: $dark-grey;
+  }
+  &:hover {
+    background-color: $lightest-grey;
+    cursor: pointer;
+  }
+}

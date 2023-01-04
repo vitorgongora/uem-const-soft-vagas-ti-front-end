@@ -1,0 +1,12 @@
+@import "variables.scss";
+
+.menu-principal {
+    background-color: $menu-principal-grey;
+    padding: 5px;
+    .nome-aluno {
+        font-size: 14px;
+    }
+    button {
+        margin: 5px;
+    }
+}

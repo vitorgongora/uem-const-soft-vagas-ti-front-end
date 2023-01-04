@@ -1,0 +1,35 @@
+@import "variables.scss";
+
+.circle-stat-container{
+    display: flex;
+    align-items: center;
+}
+
+.circle-stat {
+    flex-shrink: 0;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    line-height: 72px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.circle-stat-description {
+    margin-left: 24px;
+}
+
+.circle-stat-red {
+    background-color: #E93E3E;
+}
+
+.circle-stat-orange {
+    background-color: #F29A16;
+}
+
+.circle-stat-green {
+    background-color: #38B000;
+}

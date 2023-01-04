@@ -1,0 +1,803 @@
+@import "variables.scss";
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: monospace;
+}
+
+.ant-layout-content {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .ant-layout-content {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .ant-layout-content {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .ant-layout-content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  height: 32px;
+  margin-top: 60px;
+  margin-bottom: 42px;
+  svg {
+    width: 80%;
+  }
+}
+
+.site-layout-sub-header-background {
+  background: #fff;
+  height: 50px;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+}
+
+.ant-layout-header {
+  line-height: 50px;
+}
+
+.ant-layout-content {
+  //height: calc(100vh - 50px);
+}
+
+.site-layout-background {
+  background: #fff;
+}
+[data-theme="dark"] .site-layout-sub-header-background {
+  background: #141414;
+}
+
+.ant-layout-sider {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  max-width: 500px;
+  width: 500px;
+}
+
+.content-card {
+  margin: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .content-card {
+    .ant-col:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .search-submissions-card {
+    .ant-col:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.member-content-card {
+  margin: 16px;
+}
+
+@media screen and (max-width: 575px) {
+  .member-content-card {
+    .ant-col:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.after-input {
+  margin-left: 8px;
+}
+
+.global-sidebar .ant-layout-sider-children .ant-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//Side Bar
+
+.global-sidebar {
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.ant-menu-item > span > a,
+.ant-menu-item > span > svg {
+  transition: color 0.3s;
+  color: $sidebar-text;
+}
+
+.ant-menu-item:hover > span > a,
+.ant-menu-item:hover > span > svg {
+  //transition: color 0.3s;
+  color: $sidebar-text-hover;
+}
+
+.ant-menu-item-selected > span > a,
+.ant-menu-item-selected > span > svg {
+  transition: color 0.3s;
+  color: $sidebar-selected-text;
+}
+
+.ant-menu-item-selected:hover > span > a,
+.ant-menu-item-selected:hover > span > svg {
+  //transition: color 0.3s;
+  color: $sidebar-selected-text;
+}
+
+.ant-menu-item .ant-menu-item-icon + span,
+.ant-menu-submenu-title .ant-menu-item-icon + span, 
+.ant-menu-item .anticon + span, 
+.ant-menu-submenu-title .anticon + span {
+  margin-left: 20px;
+}
+
+.ant-menu-inline .ant-menu-item,
+.ant-menu-inline .ant-menu-submenu-title {
+  border-radius: 3px;
+  height: 53px;
+  width: 85%;
+}
+
+.ant-layout-sider,
+.ant-menu.ant-menu-dark,
+.ant-menu-sub,
+.ant-menu.ant-menu-sub {
+  background-color: $sidebar-background;
+}
+
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: $sidebar-selected;
+}
+
+// Overwrite default colors
+
+a {
+  color: $primary;
+}
+
+a:hover,
+.ant-breadcrumb a:hover {
+  color: $primary-hover;
+}
+
+.ant-layout {
+  background-color: $background-color;
+}
+
+//FIX FOR STICKY
+.ant-layout.ant-layout-has-sider > .ant-layout,
+.ant-layout.ant-layout-has-sider > .ant-layout-content {
+  overflow: visible;
+}
+
+@media screen and (max-width: 900px) {
+  .ant-layout.ant-layout-has-sider > .ant-layout,
+  .ant-layout.ant-layout-has-sider > .ant-layout-content {
+    overflow: auto;
+  }
+}
+
+.ant-picker-today-btn {
+  color: $primary;
+  &:hover {
+    color: $primary-hover;
+  }
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-checkbox-input:focus + .ant-checkbox-inner,
+.ant-checkbox-checked::after {
+  border-color: $primary-hover;
+}
+
+.ant-select-tree-checkbox-indeterminate .ant-select-tree-checkbox-inner::after {
+  background-color: $primary;
+}
+
+.ant-select-tree-checkbox-indeterminate
+  .ant-select-tree-checkbox-inner:hover::after {
+  border-color: $primary;
+}
+
+.ant-select-tree-checkbox-checked::after {
+  border-color: $primary;
+}
+
+.ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner {
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.ant-select-tree-checkbox-wrapper:hover .ant-select-tree-checkbox-inner,
+.ant-select-tree-checkbox:hover .ant-select-tree-checkbox-inner,
+.ant-select-tree-checkbox-input:focus + .ant-select-tree-checkbox-inner {
+  border-color: $primary;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  color: $primary;
+}
+
+.ant-radio-button-wrapper:hover {
+  color: $primary-hover;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
+  border-color: $primary;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active {
+  color: $primary-hover;
+}
+
+.ant-radio-button-wrapper-checked:not([class*=" ant-radio-button-wrapper-disabled"]).ant-radio-button-wrapper:first-child {
+  border-right-color: $primary;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+  color: $primary;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):active,
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  border-color: $primary;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before,
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+  border-color: $primary;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before,
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover::before {
+  background-color: $primary;
+}
+
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within,
+.ant-picker-focused {
+  box-shadow: 0 0 0 2px $light-primary;
+}
+
+.ant-picker:hover,
+.ant-picker-focused,
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+  border-color: $primary;
+}
+
+.ant-btn:hover,
+.ant-btn:focus {
+  color: $primary;
+  border-color: $primary;
+}
+
+.ant-btn.ant-btn-danger:hover,
+.ant-btn.ant-btn-danger:focus {
+  color: $white;
+  border-color: $light-red;
+}
+
+.ant-btn.ant-btn-primary {
+  border-radius: 4px;
+}
+
+.ant-btn.ant-btn-default {
+  border-radius: 4px;
+}
+
+.ant-btn.ant-btn-default.ant-btn-circle {
+  border-radius: 50%;
+}
+
+.ant-btn.ant-btn-danger {
+  border-radius: 4px;
+}
+
+.ant-btn.ant-btn-danger {
+  background-color: $red;
+}
+
+.ant-btn:focus {
+  box-shadow: 0 0 0 2px $light-primary;
+}
+
+.ant-btn.ant-btn-danger:focus {
+  box-shadow: 0 0 0 2px $light-red;
+}
+
+.ant-btn.ant-btn-danger:active,
+.ant-btn.ant-btn-danger:focus {
+  background-color: $dark-red;
+}
+
+.ant-btn.ant-btn-danger:hover {
+  background-color: $dark-red;
+}
+
+.ant-btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  &:hover,
+  &:focus {
+    background-color: $primary-hover;
+    border-color: $primary-hover;
+    color: $white;
+  }
+}
+
+.ant-input:hover {
+  border-color: $primary;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+  border-color: $primary;
+  box-shadow: 0 0 0 2px $light-primary;
+}
+
+.ant-input-search .ant-input:hover {
+  border-color: $primary;
+}
+
+.ant-input-search .ant-input:focus {
+  border-color: $primary;
+  box-shadow: 0 0 0 2px $light-primary;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+  background-color: $primary;
+}
+
+.ant-picker-time-panel-column
+  > li.ant-picker-time-panel-cell-selected
+  .ant-picker-time-panel-cell-inner {
+  background-color: $light-primary;
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: $primary;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select-single:not(.ant-select-customize-input)
+  .ant-select-selector {
+  border-color: $primary;
+  box-shadow: 0 0 0 2px $light-primary;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: $light-primary;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select-multiple
+  .ant-select-selector {
+  box-shadow: 0 0 0 2px $light-primary;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select-multiple
+  .ant-select-selector {
+  border-color: $primary;
+}
+
+.ant-input-number:hover,
+.ant-input-number-focused,
+.ant-input-number:focus,
+.ant-input-number-focused {
+  border-color: $primary;
+  box-shadow: 0 0 0 2px $light-primary;
+}
+
+.ant-input-number-handler:hover .ant-input-number-handler-up-inner,
+.ant-input-number-handler:hover .ant-input-number-handler-down-inner {
+  color: $primary;
+}
+
+.ant-pagination-item-active:focus a,
+.ant-pagination-item-active:hover a {
+  color: $primary-hover;
+}
+
+.ant-pagination-item-active a {
+  color: $primary;
+}
+
+.ant-pagination-item-active {
+  border-color: $primary;
+}
+
+.ant-pagination-item-active:focus,
+.ant-pagination-item-active:hover {
+  border-color: $primary-hover;
+}
+
+.ant-mentions:hover {
+  border-color: $primary;
+}
+
+.ant-mentions-focused {
+  box-shadow: 0 0 0 2px $light-primary;
+  border-color: $primary;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: $sidebar-background-selected;
+  border-radius: 8px;
+}
+
+.ant-menu-inline .ant-menu-item, .ant-menu-inline .ant-menu-submenu-title {
+  border-radius: 8px;
+}
+
+.ant-menu-item:active, .ant-menu-submenu-title:active {
+  background-color: $sidebar-background-active;
+}
+
+.ant-form-item-has-error .ant-form-item-explain,
+.ant-form-item-has-error .ant-form-item-split {
+  //color: $primary;
+}
+
+.ant-menu-item-selected a,
+.ant-menu-item-selected a:hover {
+  color: $primary;
+}
+
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after {
+  border: none;
+  border-right-color: $primary;
+}
+
+.ant-switch-checked {
+  background-color: $primary;
+}
+
+.ant-btn-dashed:hover,
+.ant-btn-dashed:focus {
+  color: $primary;
+  border-color: $primary;
+}
+
+.ant-menu-item a:hover {
+  color: $primary;
+}
+
+.ant-card-actions > li > span a:not(.ant-btn):hover,
+.ant-card-actions > li > span > .anticon:hover {
+  color: $primary;
+}
+
+.ant-card-bordered {
+  border-color: $card-border-grey;
+}
+
+.ant-input-affix-wrapper:hover {
+  border-color: $primary;
+}
+
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  border-color: $primary;
+  box-shadow: 0 0 0 2px $light-primary;
+}
+
+.ant-pagination-item:focus a,
+.ant-pagination-item:hover a {
+  color: $primary;
+}
+
+.ant-pagination-item:focus,
+.ant-pagination-item:hover {
+  border-color: $primary;
+}
+
+.ant-pagination-prev:focus .ant-pagination-item-link,
+.ant-pagination-next:focus .ant-pagination-item-link,
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link {
+  color: $primary;
+  border-color: $primary;
+}
+
+.ant-pagination-jump-prev
+  .ant-pagination-item-container
+  .ant-pagination-item-link-icon,
+.ant-pagination-jump-next
+  .ant-pagination-item-container
+  .ant-pagination-item-link-icon {
+  color: $primary;
+}
+
+.ant-page-header-back-button:hover {
+  color: $primary;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: $primary;
+}
+
+.ant-tabs-tab:hover {
+  color: $primary;
+}
+
+.ant-tabs-tab-btn:focus,
+.ant-tabs-tab-remove:focus,
+.ant-tabs-tab-btn:active,
+.ant-tabs-tab-remove:active {
+  color: $primary-hover;
+}
+
+.ant-tabs-ink-bar {
+  background-color: $primary;
+}
+
+.ant-menu-horizontal > .ant-menu-item-selected a,
+.ant-menu-horizontal > .ant-menu-item a:hover {
+  color: $primary;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+  color: $primary;
+  border-bottom-color: $primary;
+}
+
+.ant-table-column-sorter-up.active,
+.ant-table-column-sorter-down.active {
+  color: $primary;
+}
+
+.ant-typography a {
+  color: $primary;
+  &:hover {
+    color: $primary-hover;
+  }
+}
+
+.ant-tag-green,
+.ant-tag-success {
+  color: $dark-green;
+  background-color: $light-green;
+  border-color: $green;
+}
+
+.ant-tag-orange,
+.ant-tag-warning {
+  color: $dark-orange;
+  background-color: $light-orange;
+  border-color: $orange;
+}
+
+.ant-tag-red {
+  color: $dark-red;
+  background-color: $light-red;
+  border-color: $red;
+}
+
+.ant-tag-blue,
+.ant-tag-processing {
+  color: $dark-blue;
+  background-color: $light-blue;
+  border-color: $blue;
+}
+
+.button-link {
+  border: none;
+  background-color: transparent;
+  color: $primary;
+  padding: 0;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+    color: $primary-hover;
+  }
+  &:focus {
+    color: $primary;
+  }
+}
+
+.button-link-not-active {
+  color: $light-grey;
+  transition: color 0.2s;
+  &:hover {
+    color: $grey;
+  }
+}
+
+.ant-typography-expand,
+.ant-typography-edit,
+.ant-typography-copy {
+  color: $primary;
+}
+
+.ant-typography-expand:focus,
+.ant-typography-edit:focus,
+.ant-typography-copy:focus,
+.ant-typography-expand:hover,
+.ant-typography-edit:hover,
+.ant-typography-copy:hover {
+  color: $primary-hover;
+}
+
+.ant-modal-mask,
+.ant-image-preview-mask {
+  z-index: 1002;
+}
+
+.ant-list-item-meta-title > a:hover {
+  color: $primary-hover;
+}
+
+.ant-progress-success-bg,
+.ant-progress-bg {
+  background-color: $primary;
+}
+
+.ant-progress-inner {
+  background-color: $progress-bar-background;
+}
+
+.ant-card:hover .ant-card-meta-title a {
+  color: $primary;
+}
+
+.ant-radio-button-wrapper.ant-radio-button-wrapper-disabled:hover {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.ant-upload-list-item-actions {
+  .ant-btn:hover,
+  .ant-btn:focus {
+    border-color: transparent;
+  }
+}
+
+.ant-slider-rail {
+  height: 7px;
+  background-color: transparent;
+  border: solid 2px $separator-grey;
+}
+
+.ant-slider-track {
+  height: 7px;
+  background-color: $primary-hover;
+}
+
+.ant-slider:hover .ant-slider-track {
+  background-color: $primary-hover;
+}
+
+.ant-slider-step {
+  height: 7px;
+}
+
+.ant-slider-dot {
+  top: -3px;
+  height: 12px;
+  width: 12px;
+}
+
+.ant-slider-dot {
+  border-color: $card-border-grey;
+}
+
+.ant-slider-dot-active {
+  border-color: $primary-hover;
+}
+
+.ant-slider-handle {
+  border-color: $primary-hover;
+  margin-top: -5px;
+  width: 16px;
+  height: 16px;
+}
+
+.ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+  border-color: $primary-hover;
+}
+
+.ant-slider-handle:focus {
+  border-color: $primary-hover;
+}
+
+.ant-slider:hover .ant-slider-rail {
+  background-color: transparent;
+}
+
+.ant-slider-handle:focus {
+  box-shadow: 0 0 0 5px rgba(230, 241, 255, 0.5);
+}
+
+.ant-slider-handle.ant-tooltip-open {
+  border-color: $primary-hover;
+}
+
+.ant-slider-mark {
+  margin-top: 3px;
+}
+
+.danger-anchor {
+  color: $red;
+}
+
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  border-color: $primary;
+}
+
+.ant-upload.ant-upload-select-picture-card:hover {
+  border-color: $primary;
+}
+
+.ant-form-item:last-of-type {
+  margin-bottom: 0px;
+}
+
+.ant-collapse > .ant-collapse-item:last-child, .ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+  border-radius: 0 0 8px 8px;
+}
+
+.ant-collapse-item.ant-collapse-item-active {
+  overflow: hidden;
+}
+
+.ant-modal-content {
+  border-radius: 8px;
+}
+
+.ant-modal-header {
+  border-radius: 8px 8px 0 0;
+}
+
+.back-button-nav {
+  box-shadow: none;
+  border-color: transparent;
+  background-color: transparent;
+  border-radius: 100%;
+  &:hover {
+    border-radius: 100%;
+  }
+}

@@ -1,0 +1,65 @@
+@import "variables.scss";
+
+.filter-buttons-container .ant-radio-button-wrapper {
+    color: #808080;
+    border: none;
+    padding-left: 6px;
+    padding-right: 6px;
+    height: 14px;
+    line-height: 14px;
+    background-color: transparent;
+    &:first-child {
+        padding-left: 0px;
+    }
+}
+
+.filter-buttons-container .ant-radio-button-wrapper:hover {
+    color: $primary-green;
+}
+
+.filter-buttons-container .ant-radio-button-wrapper-checked:not([class*=" ant-radio-button-wrapper-disabled"]).ant-radio-button-wrapper {
+    color: $dark-green;
+}
+
+.filter-buttons-container .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
+    border: none;
+    background-color: transparent;
+    padding-left: 0px;
+    padding-right: 6px;
+}
+
+.filter-buttons-container .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+    color: $primary-green;
+}
+.filter-buttons-container .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+    color: $primary-green;
+}
+
+.filter-buttons-container .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+    color: $primary-green;
+}
+
+.filter-buttons-container .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+    color: $dark-green;
+}
+
+.filter-buttons-container .ant-radio-button-wrapper:focus-within {
+    box-shadow: none;
+}
+
+.filter-buttons-container .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within, .ant-picker-focused {
+    box-shadow: none;
+}
+
+.filter-buttons-container 
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before,
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover::before {
+    background-color: #d9d9d9;
+}
+
+.filter-buttons-container  
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before,
+.filter-buttons-container
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover::before {
+    background-color: #d9d9d9;
+}

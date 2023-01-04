@@ -1,0 +1,33 @@
+@import "variables.scss";
+
+.color-picker-btn {
+  .color-picker-container {
+    display: flex;
+    align-items: center;
+  }
+  width: 120px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.sketch-picker {
+  border-radius: $radius !important; //Overrides style from package
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10) !important;
+  border: 1px solid #d9d9d9;
+}
+
+.color-preview {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: $radius;
+}
+
+.color-hex-preview {
+  font-family: "Open Sans", sans-serif;
+  color: rgba(0, 0, 0, 0.85);
+  margin-left: 0.5rem;
+}

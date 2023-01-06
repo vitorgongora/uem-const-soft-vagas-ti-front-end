@@ -18,6 +18,8 @@ import { LoadingOutlined, PlusOutlined, UploadOutlined } from "@ant-design/icons
 import { Link } from "react-router-dom";
 
 const DeveloperApply = (props) => {
+  document.body.style.backgroundColor = "#EFEFEF";
+  const {  Text, Link } = Typography;
   let loading = false;
 
   const uploadButton = (
@@ -69,7 +71,7 @@ const DeveloperApply = (props) => {
           </Col>
         </Row>
       </Layout.Header>
-      <Layout >
+      <Layout style={{backgroundColor:"#EFEFEF"}}>
         <Row justify="center">
           <Col span={18}>
             <Card bordered={false} style={{ height: "94%", width: "100%", alignContent: "center", marginTop: "2%" }}>
@@ -447,7 +449,7 @@ const DeveloperApply = (props) => {
           </Col>
         </Row>
       </Layout>
-      <Layout.Footer style={{ textAlign: "center", marginTop: "5%", position:"absolute", width:"100%", bottom:0 }}>
+      <Layout.Footer style={{ textAlign: "center", marginTop: "5%", position:"absolute", width:"100%", bottom:0 ,backgroundColor:"#F9F9F9"}}>
         <Row justify="center" style={{ width: "100%" }} align="bottom">
           <Col span={8}>
             <Row>
@@ -460,18 +462,18 @@ const DeveloperApply = (props) => {
           </Col>
           <Col span={8}>
             <Row justify="center" style={{ width: "100%", position: "absolute", bottom: "1px" }} align="bottom">
-              <p>VagasTI - 2022</p>
+            <Text style={{color:"#6D6D6D",fontWeight:400,fontSize:"14px"}}>VagasTI - 2022</Text>
             </Row>
           </Col>
           <Col span={8} style={{ marginTop: "1%", display: "flex", flexDirection: "column" }}>
             <Row justify="end" style={{ marginRight: "30%" }}>
-              <Link>Termos de Serviço</Link>
+              <Link style={{color:"#6D6D6D"}}>Termos de Serviço</Link>
             </Row >
             <Row justify="end" style={{ marginRight: "30%" }}>
-              <Link>Polpitica de Privacidade</Link>
+              <Link style={{color:"#6D6D6D"}}>Polpitica de Privacidade</Link>
             </Row>
             <Row justify="end" style={{ marginRight: "30%" }}>
-              <Link>Sobre Nós</Link>
+              <Link style={{color:"#6D6D6D"}}>Sobre Nós</Link>
             </Row >
 
           </Col>

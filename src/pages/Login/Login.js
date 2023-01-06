@@ -1,6 +1,8 @@
 import React from "react";
 import { Col, Card, Row, Layout, Form, Input, Button, Typography} from 'antd';
-import { LockOutlined, UserOutlined } from '@ant-design/icons';
+import { BulbFilled, BulbTwoTone, LockOutlined, UserOutlined } from '@ant-design/icons';
+import { NoStyleItemContext } from "antd/lib/form/context";
+import Column from "antd/lib/table/Column";
 
 const Login = (props) => {
 
@@ -58,74 +60,75 @@ const Login = (props) => {
 
   return (
     <Layout>
-      <Row>
+      <Row >
         <Col span = {9}>
         <div class="imagemGreen" style={{overflow: 'hidden', height:"1010px"}}>{imagem}</div>
         </Col>
-        <Col span = {15}>
-          <Card bordered={false} style={{ height: "100%", width: "100%", alignContent: "center"}}>
-            <Row justify="end">
-              <div>{logo}</div>
+        <Col span = {15} >
+          <Card bordered={false} style={{ height: "100%" , width: "100%", alignContent: "center"}}>
+
+            <Row span={1} style={{display:"inline"}} >
+              <Col offset={20}>{logo}</Col>
             </Row>
-            <div style={{justifyContent:"center", marginLeft:"25%", marginTop:"20%"}}>
-              <Row>
-                <Col span = {12}>
-                  <Typography.Title level={2} style={{ marginBottom: 20 }}>
-                  Bem-vindo de volta à <font color = "#38B000">VagasTI</font>
-                </Typography.Title>
-                </Col>
-              </Row>
-              <Row>
-                <Form name="normal_login" className="login-form" initialValues={{remember: true,}}
+
+            <Row style={{transform:"translate(-50%, -50%)",top:"50%",left:"50%", position: "absolute"}}>
+              <Col offset={6} >
+                <Row>
+                  <Typography.Title level={2} style={{ marginBottom: 10 }}>
+                    Bem-vindo de volta à <br></br><font color = "#38B000"> VagasTI</font>
+                  </Typography.Title>
+                </Row>
+
+
+                <Form name="normal_login"  className="login-form" initialValues={{remember: true}}
                  onFinish={onFinish}>
-                  <div style={{height: "10%"}}><b>Email</b></div>
+
                   <Row>
-                    <Form.Item name="username" rules={[
+                    <Form.Item label = {<Typography.Text style={{fontWeight: 700,opacity:0.7,marginTop:"20px",fontSize:"16px" }}>Email</Typography.Text>}
+                    name="username" labelCol={{span:24}} wrapperCol={{span:24}} marginBottom={{span:0}}
+                    rules={[
                         {
-                          required: true,
+                          required: false,
                           message: 'Por favor insira seu e-mail',
                         },
-                      ]} style={{width: "80%"}}>
-                      <Input prefix={<UserOutlined className="site-form-item-icon" />}
-                      placeholder="Insira seu e-mail" />
+                      ]} style={{width: "80%",marginBottom: "10px", fontWeight: 700}} >
+                      <Input prefix={<UserOutlined className="site-form-item-icon" />} style={{borderRadius:"5px",borderColor:"#E7E7E7",borderStyle:"solid"}}
+                      placeholder="Insira seu e-mail" / >
                     </Form.Item>
-                    <Form.Item name="password" rules={[
+
+                    <Form.Item  label = {<Typography.Text style={{fontWeight: 700,opacity:0.7,marginTop:"20px",fontSize:"16px"}}>Senha</Typography.Text>}  name="password" labelCol={{span:24}} wrapperCol={{span:24}}  marginBottom={{span:0}} rules={[
                       {
-                        required: true,
+                        required: false,
                         message: 'Por favor insira sua senha',
+
                         },
-                      ]}style={{width: "80%"}}>
-                        <b>Senha</b>
-                      <Input prefix={<LockOutlined className="site-form-item-icon" />}
+                      ]} style={{width: "80%",marginTop:"-10px" }}>
+
+                      <Input prefix={<LockOutlined className="site-form-item-icon" />} style={{border:"1px" ,borderRadius:"5px",borderColor:"#E7E7E7",borderStyle:"solid"} }
                         type="password"
                         placeholder="Insira sua senha"
                       />
                     </Form.Item>
                   </Row>
-                  <div style={{justifyContent:"center", marginLeft:"0%", marginTop:"5%"}}>
-                  <Row>
-                    <Col>
-                    <Form.Item>
-                      <a className="login-form-forgot" href="/user/recupPassword">
-                        Esqueci minha senha
-                      </a>
-                      <Form.Item>
-                      <a href="/Cadastro">Ainda não tenho conta</a>
-                    </Form.Item>
-                    </Form.Item>
+
+                  <Row style={{marginTop: "19px" }}>
+                    <Col span={12}  >
+                      <Typography.Link style={{color:"#7E7E7E" ,fontWeight:300,fontSize:"13px",lineHeight:"18px" ,textAlign:"left"}} href="/user/recupPassword">Esqueci minha senha</Typography.Link>
+                      <Form.Item style={{marginTop:"-8px"}}>
+                      <Typography.Link style={{color:"#7E7E7E", fontWeight:300,fontSize:"13px",lineHeight:"18px"}} href="/Cadastro">Ainda não tenho conta</Typography.Link>
+                      </Form.Item>
                     </Col>
-                    <Col>
-                      <div style={{justifyContent:"central", marginLeft:"200%"}}>
-                      <Button type="primary" href="/vagas" className="login-form-button">
+
+                    <Col  offset={3} >
+                      <Button type="primary" href="/vagas" className="login-form-button" >
                         Entrar
                       </Button>
-                    </div>
                     </Col>
                   </Row>
-                  </div>
+
                 </Form>
-              </Row>
-            </div>
+              </Col>
+            </Row>
           </Card>
         </Col>
       </Row>

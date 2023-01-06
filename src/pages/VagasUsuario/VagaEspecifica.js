@@ -2,9 +2,9 @@ import React from "react";
 import {Row, Col, Typography, Card, Button, Layout} from "antd";
 import "../../sass/layout-header.scss";
 import UserButton from "../../components/layout/GlobalHeader/UserButton/UserButton";
+document.body.style.backgroundColor = "#EFEFEF";
 
-
-const VagaEspecifica = (props) => {  
+const VagaEspecifica = (props) => {
   const { Title, Paragraph, Text, Link } = Typography;
 
   const tag_vaga_alimenta = (
@@ -47,7 +47,7 @@ const VagaEspecifica = (props) => {
         <path d="M29.9531 0H54V18H29.9531V0ZM29.9531 54V24.0469H54V54H29.9531ZM0 54V36H24.0469V54H0ZM0 29.9531V0H24.0469V29.9531H0Z" fill="black"/>
         </svg>
       );
-  
+
     return (
       <>
         <Layout.Header className="site-layout-sub-header-background layout-header" style={{ height: "80px" }}>
@@ -73,7 +73,7 @@ const VagaEspecifica = (props) => {
             </Col>
           </Row>
         </Layout.Header>
-        <Layout >
+        <Layout style={{backgroundColor:"#EFEFEF"}}>
           <Row justify="center">
             <Col span={18}>
                 <Row>
@@ -118,7 +118,7 @@ const VagaEspecifica = (props) => {
                   </Card>
                 </Row>
                 <Row>
-                  <Card bordered={false} style={{ height: "100%", width: "100%", alignContent: "center", marginTop: "2%" }}>
+                  <Card bordered={false} style={{ height: "100%", width: "100%", alignContent: "center", marginTop: "2%"  }}>
                     <div style={{ justifyContent: "center", marginLeft: "4%", marginTop: "1%" }}>
                     <Row justify="start">
                       <Col span={24}>
@@ -148,8 +148,8 @@ const VagaEspecifica = (props) => {
             </Col>
           </Row>
         </Layout>
-        <Layout.Footer style={{ textAlign: "center", marginTop: "5%", position:"relative", width:"100%", bottom:0 }}>
-          <Row justify="center" style={{ width: "100%" }} align="bottom">
+        <Layout.Footer style={{ textAlign: "center", marginTop: "5%", position:"relative", width:"100%", bottom:0,backgroundColor:"#F9F9F9"}}>
+          <Row  justify="center" style={{ width: "100%" }} align="bottom">
             <Col span={8}>
               <Row>
                 <div style={{ marginLeft: "30%" }}>{logo}</div>
@@ -160,18 +160,18 @@ const VagaEspecifica = (props) => {
             </Col>
             <Col span={8}>
               <Row justify="center" style={{ width: "100%", position: "absolute", bottom: "1px" }} align="bottom">
-                <p>VagasTI - 2022</p>
+                <Text style={{color:"#6D6D6D",fontWeight:400,fontSize:"14px"}}>VagasTI - 2022</Text>
               </Row>
             </Col>
             <Col span={8} style={{ marginTop: "1%", display: "flex", flexDirection: "column" }}>
               <Row justify="end" style={{ marginRight: "30%" }}>
-                <Link>Termos de Serviço</Link>
+                <Link style={{color:"#6D6D6D"}}>Termos de Serviço</Link>
               </Row >
               <Row justify="end" style={{ marginRight: "30%" }}>
-                <Link>Politica de Privacidade</Link>
+                <Link style={{color:"#6D6D6D"}}>Politica de Privacidade</Link>
               </Row>
               <Row justify="end" style={{ marginRight: "30%" }}>
-                <Link>Sobre Nós</Link>
+                <Link style={{color:"#6D6D6D"}}>Sobre Nós</Link>
               </Row >
             </Col>
           </Row>
@@ -179,5 +179,5 @@ const VagaEspecifica = (props) => {
       </>
     );
   };
-  
+
   export default VagaEspecifica;

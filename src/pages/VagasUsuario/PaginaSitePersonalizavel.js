@@ -3,6 +3,7 @@ import {Row, Col, Typography, Card, Button, Input, Layout, Form, Select, Paginat
 import "../../sass/layout-header.scss";
 import { LoadingOutlined, PlusOutlined} from "@ant-design/icons";
 import "../../sass/justifica.scss";
+document.body.style.backgroundColor = "#EFEFEF";
 
 const PaginaSitePersonalizavel = (props) => {
   let loading = false;
@@ -112,7 +113,7 @@ const PaginaSitePersonalizavel = (props) => {
     </svg>
 
   );
-  
+
   return (
     <>
       <Layout.Header className="site-layout-sub-header-background layout-header" style={{ height: "80px" }}>
@@ -136,10 +137,10 @@ const PaginaSitePersonalizavel = (props) => {
           </Col>
         </Row>
       </Layout.Header>
-      <Layout >
+      <Layout style={{backgroundColor:"#EFEFEF"}}>
         <Row style={{marginTop:"1%", marginLeft:"1%"}} justify="center">
           <Col span={8}>
-              <Input.Search 
+              <Input.Search
                 placeholder="Pesquisar por vaga"
                 allowClear>
               </Input.Search>
@@ -152,7 +153,7 @@ const PaginaSitePersonalizavel = (props) => {
                 <Typography.Title level={3} style={{ marginBottom: 20 }}>
                   Filtrar Vagas
                 </Typography.Title>
-              </Row> 
+              </Row>
               <Row>
                 <Tree
                   checkable
@@ -248,10 +249,10 @@ const PaginaSitePersonalizavel = (props) => {
                               Desenvolvedor Back-end Java Júnior
                             </Typography.Title></Row>
                             <Row>
-                            <font face= "Open Sans" size = "2">Ensino superior completo</font>
+                            <Text style={{fontSize:"14px"}}>Ensino superior completo</Text>
                             </Row>
                             <Row>
-                              <font face= "Open Sans" size = "2" style={{marginTop:"1%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</font>
+                              <Text style={{marginTop:"1%",fontSize:"14px"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</Text>
                             </Row>
                         </Col>
                       </Row>
@@ -268,10 +269,10 @@ const PaginaSitePersonalizavel = (props) => {
                               Desenvolvedor Front-end React
                             </Typography.Title></Row>
                             <Row>
-                            <font face= "Open Sans" size = "2">Ensino superior completo</font>
+                              <Text style={{fontSize:"14px"}}>Ensino superior completo</Text>
                             </Row>
                             <Row>
-                              <font face= "Open Sans" size = "2" style={{marginTop:"2%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</font>
+                              <Text style={{marginTop:"1%",fontSize:"14px"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</Text>
                             </Row>
                         </Col>
                       </Row>
@@ -287,10 +288,10 @@ const PaginaSitePersonalizavel = (props) => {
                               Desenvolvedor Back-end Java Senior
                             </Typography.Title></Row>
                             <Row>
-                            <font face= "Open Sans" size = "2">Ensino superior completo</font>
+                              <Text style={{fontSize:"14px"}}>Ensino superior completo</Text>
                             </Row>
                             <Row>
-                              <font face= "Open Sans" size = "2" style={{marginTop:"2%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</font>
+                              <Text style={{marginTop:"1%",fontSize:"14px"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</Text>
                             </Row>
                         </Col>
                       </Row>
@@ -306,10 +307,10 @@ const PaginaSitePersonalizavel = (props) => {
                               Desenvolvedor Front-end Angular
                             </Typography.Title></Row>
                             <Row>
-                            <font face= "Open Sans" size = "2">Ensino superior completo</font>
+                              <Text style={{fontSize:"14px"}}>Ensino superior completo</Text>
                             </Row>
                             <Row>
-                              <font face= "Open Sans" size = "2" style={{marginTop:"2%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</font>
+                              <Text style={{marginTop:"1%",fontSize:"14px"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</Text>
                             </Row>
                         </Col>
                       </Row>
@@ -325,10 +326,10 @@ const PaginaSitePersonalizavel = (props) => {
                               Desenvolvedor Back-end Python Pleno
                             </Typography.Title></Row>
                             <Row>
-                            <font face= "Open Sans" size = "2">Ensino superior completo</font>
+                              <Text style={{fontSize:"14px"}}>Ensino superior completo</Text>
                             </Row>
                             <Row>
-                              <font face= "Open Sans" size = "2" style={{marginTop:"2%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</font>
+                              <Text style={{marginTop:"1%",fontSize:"14px"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</Text>
                             </Row>
                         </Col>
                       </Row>
@@ -343,7 +344,7 @@ const PaginaSitePersonalizavel = (props) => {
           </Col>
         </Row>
       </Layout>
-      <Layout.Footer style={{ textAlign: "center", marginTop: "5%", position:"relative", width:"100%", bottom:0 }}>
+      <Layout.Footer style={{ textAlign: "center", marginTop: "5%", position:"relative", width:"100%", bottom:0 ,backgroundColor:"#F9F9F9"}}>
         <Row justify="center" style={{ width: "100%" }} align="bottom">
           <Col span={8}>
             <Row>
@@ -355,18 +356,18 @@ const PaginaSitePersonalizavel = (props) => {
           </Col>
           <Col span={8}>
             <Row justify="center" style={{ width: "100%", position: "absolute", bottom: "1px" }} align="bottom">
-              <p>VagasTI - 2022</p>
+              <Text style={{color:"#6D6D6D",fontWeight:400,fontSize:"14px"}}>VagasTI - 2022</Text>
             </Row>
           </Col>
           <Col span={8} style={{ marginTop: "1%", display: "flex", flexDirection: "column" }}>
             <Row justify="end" style={{ marginRight: "30%" }}>
-              <Link>Termos de Serviço</Link>
+            <Link style={{color:"#6D6D6D"}}>Termos de Serviço</Link>
             </Row >
             <Row justify="end" style={{ marginRight: "30%" }}>
-              <Link>Politica de Privacidade</Link>
+              <Link style={{color:"#6D6D6D"}}>Politica de Privacidade</Link>
             </Row>
             <Row justify="end" style={{ marginRight: "30%" }}>
-              <Link>Sobre Nós</Link>
+              <Link style={{color:"#6D6D6D"}}>Sobre Nós</Link>
             </Row >
           </Col>
         </Row>
@@ -374,5 +375,5 @@ const PaginaSitePersonalizavel = (props) => {
     </>
   );
 };
-  
+
   export default PaginaSitePersonalizavel;

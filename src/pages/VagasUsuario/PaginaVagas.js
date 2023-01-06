@@ -111,7 +111,7 @@ const PaginaVagas = (props) => {
     </svg>
 
   );
-  
+
   return (
     <>
       <Layout.Header className="site-layout-sub-header-background layout-header" style={{ height: "80px" }}>
@@ -135,10 +135,10 @@ const PaginaVagas = (props) => {
           </Col>
         </Row>
       </Layout.Header>
-      <Layout >
+      <Layout style={{backgroundColor:"#EFEFEF"}}>
         <Row style={{marginTop:"1%", marginLeft:"1%"}} justify="center">
           <Col span={8}>
-              <Input.Search 
+              <Input.Search
                 placeholder="Pesquisar por vaga"
                 allowClear>
               </Input.Search>
@@ -151,7 +151,7 @@ const PaginaVagas = (props) => {
                 <Typography.Title level={3} style={{ marginBottom: 20 }}>
                   Filtrar Vagas
                 </Typography.Title>
-              </Row> 
+              </Row>
               <Row>
                 <Tree
                   checkable
@@ -166,7 +166,7 @@ const PaginaVagas = (props) => {
                 />
               </Row>
               <Row justify="start">
-                <font face= "Open Sans" size = "3" style={{marginTop:"5%"}}>Tecnologias</font>
+                <Typography.Text  style={{marginTop:"5%"}}>Tecnologias</Typography.Text >
                 <Form.Item
                         name="Tecnologias"
                         style={{width:"100%", marginBottom:"10%"}}
@@ -186,7 +186,7 @@ const PaginaVagas = (props) => {
                     </Select>
                   </Form.Item>
                   <Row>
-                    <font face= "Open Sans" size = "3">Localização</font>
+                    <Typography.Text>Localização</Typography.Text>
                     <Form.Item
                         name="Localização"
                         style={{width:"100%", marginBottom:"10%"}}
@@ -218,7 +218,7 @@ const PaginaVagas = (props) => {
                   </Typography.Title>
                 </Col>
                 <Col>
-                  <Statistic fontWeight="40px" style={{marginLeft:"10px", marginBottom:"12px"}} value={973}/>
+                  <Statistic fontWeight="40px" style={{marginLeft:"10px", marginBottom:"12px"}} value={'('+973+')'}/>
                 </Col>
               </Row>
               <Row>
@@ -242,10 +242,10 @@ const PaginaVagas = (props) => {
                               Desenvolvedor Back-end Java Júnior
                             </Typography.Title></Row>
                             <Row>
-                            <font face= "Open Sans" size = "2">Ensino superior completo</font>
+                            <Typography.Text>Ensino superior completo</Typography.Text>
                             </Row>
                             <Row>
-                              <font face= "Open Sans" size = "2" style={{marginTop:"1%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</font>
+                              <Typography.Text style={{marginTop:"1%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</Typography.Text>
                             </Row>
                         </Col>
                       </Row>
@@ -262,10 +262,10 @@ const PaginaVagas = (props) => {
                               Desenvolvedor Front-end React
                             </Typography.Title></Row>
                             <Row>
-                            <font face= "Open Sans" size = "2">Ensino superior completo</font>
+                            <Typography.Text>Ensino superior completo</Typography.Text>
                             </Row>
                             <Row>
-                              <font face= "Open Sans" size = "2" style={{marginTop:"2%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</font>
+                              <Typography.Text  style={{marginTop:"2%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</Typography.Text>
                             </Row>
                         </Col>
                       </Row>
@@ -281,10 +281,10 @@ const PaginaVagas = (props) => {
                               Desenvolvedor Back-end Java Senior
                             </Typography.Title></Row>
                             <Row>
-                            <font face= "Open Sans" size = "2">Ensino superior completo</font>
+                            <Typography.Text>Ensino superior completo</Typography.Text>
                             </Row>
                             <Row>
-                              <font face= "Open Sans" size = "2" style={{marginTop:"2%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</font>
+                              <Typography.Text  style={{marginTop:"2%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</Typography.Text>
                             </Row>
                         </Col>
                       </Row>
@@ -300,10 +300,10 @@ const PaginaVagas = (props) => {
                               Desenvolvedor Front-end Angular
                             </Typography.Title></Row>
                             <Row>
-                            <font face= "Open Sans" size = "2">Ensino superior completo</font>
+                            <Typography.Text>Ensino superior completo</Typography.Text>
                             </Row>
                             <Row>
-                              <font face= "Open Sans" size = "2" style={{marginTop:"2%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</font>
+                              <Typography.Text style={{marginTop:"2%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</Typography.Text>
                             </Row>
                         </Col>
                       </Row>
@@ -319,10 +319,10 @@ const PaginaVagas = (props) => {
                               Desenvolvedor Back-end Python Pleno
                             </Typography.Title></Row>
                             <Row>
-                            <font face= "Open Sans" size = "2">Ensino superior completo</font>
+                            <Typography.Text >Ensino superior completo</Typography.Text>
                             </Row>
                             <Row>
-                              <font face= "Open Sans" size = "2" style={{marginTop:"2%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</font>
+                              <Typography.Text style={{marginTop:"2%"}}>Benefícios: Vale-refeição, gym pass, plano de saúde e convênio com escola</Typography.Text>
                             </Row>
                         </Col>
                       </Row>
@@ -337,7 +337,7 @@ const PaginaVagas = (props) => {
           </Col>
         </Row>
       </Layout>
-      <Layout.Footer style={{ textAlign: "center", marginTop: "5%", position:"relative", width:"100%", bottom:0 }}>
+      <Layout.Footer style={{ textAlign: "center", marginTop: "5%", position:"relative", width:"100%", bottom:0 ,backgroundColor:"#F9F9F9"}}>
         <Row justify="center" style={{ width: "100%" }} align="bottom">
           <Col span={8}>
             <Row>
@@ -354,13 +354,13 @@ const PaginaVagas = (props) => {
           </Col>
           <Col span={8} style={{ marginTop: "1%", display: "flex", flexDirection: "column" }}>
             <Row justify="end" style={{ marginRight: "30%" }}>
-              <Link>Termos de Serviço</Link>
+              <Link style={{color:"#6D6D6D"}}>Termos de Serviço</Link>
             </Row >
             <Row justify="end" style={{ marginRight: "30%" }}>
-              <Link>Politica de Privacidade</Link>
+              <Link style={{color:"#6D6D6D"}}>Politica de Privacidade</Link>
             </Row>
             <Row justify="end" style={{ marginRight: "30%" }}>
-              <Link>Sobre Nós</Link>
+              <Link style={{color:"#6D6D6D"}}>Sobre Nós</Link>
             </Row >
           </Col>
         </Row>
@@ -368,5 +368,5 @@ const PaginaVagas = (props) => {
     </>
   );
 };
-  
+
   export default PaginaVagas;

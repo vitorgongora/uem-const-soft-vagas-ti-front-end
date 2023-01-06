@@ -53,11 +53,11 @@ const RecupPassword = (props) => {
   return (
     <Layout >
       <Row>
-        <Col span={9} style={{height:"750px"}}>
-          <div class="imagemGreen" style={{overflow: 'hidden', height:"750px"}}>{imagem}</div>
+        <Col span={9} style={{height:"100%"}}>
+          <div class="imagemGreen" style={{overflow: 'hidden', height:"100%"}}>{imagem}</div>
         </Col>
         <Col span={15}>
-          <Card bordered={false} style={{ height: "750px", width: "100%", alignContent: "center"}}>
+          <Card bordered={false} style={{ height: "100%", width: "100%", alignContent: "center"}}>
             <Row justify="end">
               <div>{logo}</div>
             </Row>
@@ -81,7 +81,7 @@ const RecupPassword = (props) => {
                     style={{marginTop: "2%"}}
                   >
                     <Form.Item
-                      label="Email"
+                      label= {<Typography.Text strong>Email</Typography.Text>}
                       name="Email"
                       style={{width: "53%"}}
                       rules={
@@ -90,23 +90,25 @@ const RecupPassword = (props) => {
                         ]
                       }
                     >
-                      <Input placeholder="insira seu e-mail" />
+                      <Input placeholder="Insira seu e-mail" />
                     </Form.Item>
-                    
+
                     <Form.Item style={{marginBottom: "0px", display:"block"}}>
                       <Row>
-                        <Col span={10}>
-                          <Typography.Link href="/user/recupPasswordTwo" target="_self">
+                        <Col span={10} style={{marginTop:"-5px"}} >
+                          <Typography.Link href="/user/recupPasswordTwo" target="_self" style={{color:"#7E7E7E"}}>
                             Já tenho um código de recuperação
                           </Typography.Link>
                         </Col>
-                        <Button
-                          type="primary"
-                          htmlType="submit"
-                          style={{ display: "flex"}}
-                        >
-                          Enviar
-                        </Button>
+                        <Col span={10} style={{marginTop:"-8px"}} >
+                          <Button
+                            type="primary"
+                            htmlType="submit"
+                            style={{ display: "flex"}}
+                          >
+                            Enviar
+                          </Button>
+                        </Col>
                       </Row>
                     </Form.Item>
                   </Form>

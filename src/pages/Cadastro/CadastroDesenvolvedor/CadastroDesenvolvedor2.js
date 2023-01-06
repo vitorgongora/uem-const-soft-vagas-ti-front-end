@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Card, Row, Layout, Form, Input, Button, Typography, DatePicker, Select, Checkbox} from 'antd';
 
 const CadastroDesenvolvedor2 = (props) => {
+  const { Title, Paragraph, Text, Link } = Typography;
   const onFinish = (values) => {
     console.log('Success:', values);
   };
@@ -158,7 +159,7 @@ const CadastroDesenvolvedor2 = (props) => {
                       <Input placeholder="Insira as tecnologias" />
                       </Form.Item>
                       <div  style={{marginTop:"10px"}}>
-                      <Checkbox><font face= "Open Sans" size = "2" color = "#7f7f7f"  style={{marginTop:"100%"}}>Concordo com os termos de serviço e com a política de privacidade</font></Checkbox>
+                      <Checkbox><Text style={{marginTop:"100%",fontSize:"12px"}}>Concordo com os termos de serviço e com a política de privacidade</Text></Checkbox>
                       </div>
                     </Form>
               </Col>
@@ -203,7 +204,7 @@ const CadastroDesenvolvedor2 = (props) => {
                         }
                       >
                         <Input placeholder="Insira o complemento" />
-                
+
                       </Form.Item>
                       <Form.Item
                         label="Nível de escolaridade"

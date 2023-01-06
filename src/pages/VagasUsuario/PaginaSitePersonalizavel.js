@@ -168,7 +168,7 @@ const PaginaSitePersonalizavel = (props) => {
                 />
               </Row>
               <Row justify="start">
-                <font face= "Open Sans" size = "3" style={{marginTop:"5%"}}>Tecnologias</font>
+                <Text  style={{marginTop:"5%",fontSize:"14px"}}>Tecnologias</Text>
                 <Form.Item
                         name="Tecnologias"
                         style={{width:"100%", marginBottom:"10%"}}
@@ -188,7 +188,7 @@ const PaginaSitePersonalizavel = (props) => {
                     </Select>
                   </Form.Item>
                   <Row>
-                    <font face= "Open Sans" size = "3">Localização</font>
+                    <Text style={{marginTop:"1%",fontSize:"14px"}}>Localização</Text>
                     <Form.Item
                         name="Localização"
                         style={{width:"100%", marginBottom:"10%"}}

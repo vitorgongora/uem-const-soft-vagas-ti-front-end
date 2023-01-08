@@ -124,21 +124,18 @@ const PaginaSitePersonalizavel = (props) => {
             </Row>
           </Col>
           <Col span={8} style={{ marginTop: "1%", display: "flex", flexDirection: "row" }}>
-            <Row justify="center" style={{ width: "100%" }}>
-              <h3 style={{ marginRight: "1%" }}>Vagas</h3>
-              <h3 style={{ marginLeft: "1%", fontWeight: "bold" }}>Planos para empresas</h3>
-            </Row>
+
           </Col>
           <Col span={8} style={{ marginTop: "1%" }}>
             <Row justify="center" style={{ marginLeft: "8%" }}>
-              <Button type="secondary" style={{ marginLeft: "5%", marginTop: "1%" }} href="/cadastro">Criar nova conta</Button>
+              <Button type="link" style={{ marginLeft: "5%", marginTop: "1%" ,color:"#6D6D6D"}}  href="/cadastro">Criar nova conta</Button>
               <Button type="primary" color="#E93E3E" style={{ marginLeft: "5%", marginTop: "1%" }} href="/login" danger>Entrar</Button>
             </Row>
           </Col>
         </Row>
       </Layout.Header>
       <Layout style={{backgroundColor:"#EFEFEF"}}>
-        <Row style={{marginTop:"1%", marginLeft:"1%"}} justify="center">
+        <Row style={{ backgroundColor:"#F7F7F7",padding:"20px"}} justify="center">
           <Col span={8}>
               <Input.Search
                 placeholder="Pesquisar por vaga"

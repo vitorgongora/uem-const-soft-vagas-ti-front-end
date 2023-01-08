@@ -16,10 +16,11 @@ import "../../sass/layout-header.scss";
 import UserButton from "../../components/layout/GlobalHeader/UserButton/UserButton";
 import { LoadingOutlined, PlusOutlined, UploadOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import Title from "antd/lib/skeleton/Title";
 
 const DeveloperApply = (props) => {
   document.body.style.backgroundColor = "#EFEFEF";
-  const {  Text, Link } = Typography;
+  const {  Text, Link,Title } = Typography;
   let loading = false;
 
   const uploadButton = (
@@ -56,8 +57,8 @@ const DeveloperApply = (props) => {
           </Col>
           <Col span={8} style={{ marginTop: "1%", display: "flex", flexDirection: "row" }}>
             <Row justify="center" style={{ width: "100%" }}>
-              <h3 style={{ marginRight: "1%" }}>Vagas</h3>
-              <h3 style={{ marginLeft: "1%", fontWeight: "bold" }}>Planos para empresas</h3>
+              <Text  style={{ marginRight: "1%",color:"#6D6D6D" }}>Vagas</Text>
+              <Text  style={{ marginLeft: "1%", fontWeight: "bold" }}>Planos para empresas</Text>
             </Row>
           </Col>
           <Col span={8} style={{ marginTop: "1%" }}>

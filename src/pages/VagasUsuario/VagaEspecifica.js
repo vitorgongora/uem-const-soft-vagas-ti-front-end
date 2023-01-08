@@ -1,5 +1,5 @@
 import React from "react";
-import {Row, Col, Typography, Card, Button, Layout} from "antd";
+import {Row, Col, Typography, Card, Button, Layout,Input} from "antd";
 import "../../sass/layout-header.scss";
 import UserButton from "../../components/layout/GlobalHeader/UserButton/UserButton";
 document.body.style.backgroundColor = "#EFEFEF";
@@ -59,21 +59,27 @@ const VagaEspecifica = (props) => {
             </Col>
             <Col span={8} style={{ marginTop: "1%", display: "flex", flexDirection: "row" }}>
               <Row justify="center" style={{ width: "100%" }}>
-                <h3 style={{ marginRight: "1%" }}>Vagas</h3>
-                <h3 style={{ marginLeft: "1%", fontWeight: "bold" }}>Planos para empresas</h3>
+                <Text style={{ marginRight: "1%",color:"#6D6D6D" }}>Vagas</Text>
+                <Text style={{ marginLeft: "1%", fontWeight: "bold" }}>Planos para empresas</Text>
               </Row>
             </Col>
             <Col span={8} style={{ marginTop: "1%" }}>
               <Row justify="center" style={{ marginLeft: "8%" }}>
-                <UserButton
-                  username={"João da Silva"}
-                  accessLevel={"account_admin"}
-                />
+                <Button type="link" style={{ marginLeft: "5%", marginTop: "1%" ,color:"#6D6D6D"}} href="/cadastro">Criar nova conta</Button>
+                <Button type="primary" style={{ marginLeft: "5%", marginTop: "1%" }} href="/login">Entrar</Button>
               </Row>
             </Col>
           </Row>
         </Layout.Header>
         <Layout style={{backgroundColor:"#EFEFEF"}}>
+          <Row style={{ backgroundColor:"#F7F7F7",padding:"15px"}} justify="center">
+            <Col span={8}  >
+                <Input.Search
+                  placeholder="Pesquisar por vaga"
+                  allowClear>
+                </Input.Search>
+            </Col>
+          </Row>
           <Row justify="center">
             <Col span={18}>
                 <Row>
